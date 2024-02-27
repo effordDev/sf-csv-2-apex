@@ -1,0 +1,74 @@
+.contentBox {
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.tableStyle td {
+	border: 1px solid black;
+	text-align: center;
+}
+
+.tableStyle {
+	text-align: center;
+}
+
+.invalidTableHeader {
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.validationInfo {
+	font-size: 18px;
+	text-align: center;
+}
+
+.templateButtonClass {
+    text-align: center;
+}
+
+.errorList {
+	text-align:left;
+}
+
+.saveButtonDiv {
+	margin-top : 20px;
+	text-align: center;
+}
+
+.cancelButtonClass {
+	text-align: right;
+}
+
+.progressText {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.fileUploadedClass {
+	text-align: center;
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+.searchButton {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.loadingText {
+	margin-top: 20px;
+}
+
+.statusSpacing {
+	margin-bottom: 40px;
+}
+
+.uploadCompleteClass {
+	font-weight: bold;
+    text-decoration: underline;
+}
+
+.templateDownloadButton {
+	text-align: center;
+}

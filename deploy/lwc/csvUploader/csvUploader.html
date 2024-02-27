@@ -1,0 +1,55 @@
+<template>
+    <template if:true={loading}>
+		<lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+	</template>
+
+    <div class="slds-box contentBox">
+        <div class="templateButtonClass">
+            <lightning-radio-group name="radioGroup"
+                label=""
+                options={templateButtons}
+                value={selectedTemplate}
+                onchange={handleTemplateButtonClick}
+                required
+                type="button"
+                variant="label-hidden"
+                disabled={disabledTemplateBtns}
+            ></lightning-radio-group>
+        </div>
+
+        <div class="validationInfo">
+            <br/>
+       
+            <lightning-input
+                type="file" 
+                accept=".csv"
+                label={labels.CSVFile}
+                onchange={handleUploadFinished}>
+            </lightning-input>
+        </div>
+
+        <template if:true={errorRows.length}>
+            <hr/>
+            <p class="invalidTableHeader">{labels.InvalidRecords} ({errorRows.length})</p>
+            <table class="tableStyle">
+                <tr>
+                    <th width="10%">{labels.Row}</th>
+                    <th width="90%">{labels.ErrorList}</th>
+                </tr>
+        
+                <template for:each={errorRows} for:item="errorRow">
+                    <tr key={errorRow.rowNumber}>
+                        <td>{errorRow.rowNumber}</td>
+                        <td>
+                            <ul class="errorList">
+                                <template for:each={errorRow.errors} for:item="error">
+                                    <li key={error}>{error}</li>
+                                </template>
+                            </ul>
+                        </td>
+                    </tr>
+                </template>
+            </table>
+        </template>
+    </div>
+</template>
